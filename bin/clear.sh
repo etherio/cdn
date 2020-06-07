@@ -10,9 +10,9 @@ delete_tmp() {
 }
 
 delete_lib() {
-    cp $BIN/../lib/.gitkeep $BIN/../.a98ruj32e.tmp
+    cp $BIN/../docs/.gitkeep $BIN/../.a98ruj32e.tmp
     echo -ne "[-] \e[0;34mDeleting all files in 'lib' directory.\e[0m\r"
-    rm -rf $BIN/../lib
+    rm -rf $BIN/../docs
     echo -e  "[+] \e[0;32mRemoved!                              \e[0m"
     mkdir $BIN/../lib && mv $BIN/../.a98ruj32e.tmp $BIN/../lib/.gitkeep
 }

@@ -2,7 +2,7 @@
 BIN="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ROOT="$( cd "$BIN/../" >/dev/null 2>&1 && pwd )"
 TEMP="$ROOT/tmp"
-DIST="$ROOT/lib"
+DIST="$ROOT/docs"
 
 $BIN/install.sh jquery
 if [ -d $DIST/jquery ]
@@ -10,8 +10,9 @@ then
     echo -e ">> \e[1;32m'jquery'\e[0;36m has been installed.\e[0m"
     echo -e "\e[34mRun 'bin/clear.sh' to clear all cache\e[0m"
 else
-    cd $TEMP/jquery-master && npm run build
-    cp -r $TEMP/jquery-master/dist/ $DIST/jquery/.
+    # cd $TEMP/jquery-master && npm run build
+    mkdir $DIST/jquery
+    cp -r $TEMP/jquery-master/dist/** $DIST/jquery
     echo -e ">> \e[1;32m'jquery'\e[0;36m has been installed.\e[0m"
 fi
 

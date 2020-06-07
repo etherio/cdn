@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2020-06-05T09:28Z
+ * Date: 2020-06-07T12:34Z
  */
 ( function( global, factory ) {
 
