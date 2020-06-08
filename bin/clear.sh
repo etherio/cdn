@@ -17,6 +17,13 @@ delete_lib() {
     mkdir $BIN/../lib && mv $BIN/../.a98ruj32e.tmp $BIN/../lib/.gitkeep
 }
 
+delete_tmp
+
+if [ ! $1 ]
+then
+    exit
+fi
+
 if [ $1 = '-a' ]
 then
     delete_lib
@@ -26,5 +33,3 @@ if [ $1 = '--all' ]
 then
     delete_lib
 fi
-
-delete_tmp
