@@ -1,0 +1,8 @@
+sites:
+    name: Ethereal
+    locale: en-US
+
+
+webrick:
+    headers:
+        Cache-Control: max-age=3600
